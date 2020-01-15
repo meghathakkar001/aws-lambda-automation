@@ -1,0 +1,32 @@
+{
+  "details": {
+    "parameters": "Map<String, String>",
+    "contactData": {
+      "initialContactId": "str",
+      "customerEndpoint": {
+        "type": "str",
+        "address": "str"
+      },
+      "initiationMethod": "str",
+      "mediaStreams": {
+        "customer": {
+          "audio": "Object"
+        }
+      },
+      "channel": "str",
+      "instanceARN": "str",
+      "systemEndpoint": {
+        "type": "str",
+        "address": "str"
+      },
+      "attributes": {
+        "cardNumber": "str",
+        "stateID": "str"
+      },
+      "previousContactId": "str",
+      "contactId": "str",
+      "queue": "Object"
+    }
+  },
+  "name": "str"
+}

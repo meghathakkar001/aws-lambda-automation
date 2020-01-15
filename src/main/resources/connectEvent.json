@@ -1,0 +1,34 @@
+{
+  "Details": {
+    "ContactData": {
+      "Attributes": {
+        "CardNumber": "1234",
+        "stateID": "25600000G-Main-Group"
+      },
+      "Channel": "VOICE",
+      "ContactId": "ae57a798-3956-4525-b708-a889033e4e2c",
+      "CustomerEndpoint": {
+        "Address": "Restricted",
+        "Type": "TELEPHONE_NUMBER"
+      },
+      "InitialContactId": "ae57a798-3956-4525-b708-a889033e4e2c",
+      "InitiationMethod": "INBOUND",
+      "InstanceARN": "arn:aws:connect:us-west-2:888939432570:instance/74eef42a-9ebd-4739-94a5-4f35acd21916",
+      "MediaStreams": {
+        "Customer": {
+          "Audio": null
+        }
+      },
+      "PreviousContactId": "ae57a798-3956-4525-b708-a889033e4e2c",
+      "Queue": null,
+      "SystemEndpoint": {
+        "Address": "+18573275981",
+        "Type": "TELEPHONE_NUMBER"
+      }
+    },
+    "Parameters": {
+      "intent": "amend_bank_details"
+    }
+  },
+  "Name": "ContactFlowEvent"
+}
