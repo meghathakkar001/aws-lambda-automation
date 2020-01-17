@@ -1,0 +1,6 @@
+{
+  "+18573275981": {
+    "intentName":"amend_bank_details",
+    "intentConfirmationPrompt":"Do you want to amend bank details?"
+  }
+}

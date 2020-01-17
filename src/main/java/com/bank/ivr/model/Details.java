@@ -1,4 +1,4 @@
-package com.barclays.ivr.model;
+package com.bank.ivr.model;
 
 import java.util.Map;
 

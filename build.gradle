@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.barclays.ivr'
+group 'com.bank.ivr'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -20,12 +20,12 @@ dependencies {
 
 }
 
-task buildZip(type: Zip){
+task buildZip(type: Zip) {
     from compileJava
     from processResources
     into('lib') {
         from configurations.runtimeClasspath
     }
 
-build.dependsOn buildZip
+    build.dependsOn buildZip
 }
