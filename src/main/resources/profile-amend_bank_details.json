@@ -1,0 +1,5 @@
+{
+    "intentName":"amend_bank_details",
+    "intentConfirmationQuestion":"<speak>Are you calling to amend bank details?</speak>",
+    "welcomeMessage": "<speak>Welcome to Bank Payment Solutions.</speak>"
+}
