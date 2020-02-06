@@ -17,7 +17,10 @@ import java.util.Map;
 public class LexPutSessionMain {
     public AWSConnectResponse putSessionHandler(AWSConnectEvent request, Context context) {
 
-        Map<String, String> profile = getProfile(request.Details.ContactData.SystemEndpoint.Address);
+        System.out.println("Request received: "+ request);
+
+
+        Map<String, String> profile = getProfile(request);
         AWSConnectResponse.AWSConnectResponseBuilder responseBuilder=AWSConnectResponse.AWSConnectResponseBuilder.anAWSConnectResponse().withStatusCode(200);
 
         if(initializeIntent(request)){
@@ -59,11 +62,18 @@ public class LexPutSessionMain {
     }
 
     private boolean initializeIntent(AWSConnectEvent request) {
+        if(request==null || request.Details ==null || request.Details.Parameters==null){
+            return false;
+        }
         return (request.Details.Parameters.get("initializeIntent")!=null && "Yes".equals(request.Details.Parameters.get("initializeIntent")));
     }
 
-    private Map<String, String> getProfile(String dnis) {
+    private Map<String, String> getProfile(AWSConnectEvent request) {
         ObjectMapper objectMapper = new ObjectMapper();
+        String dnis=null;
+        if(request !=null && request.Details!=null && request.Details.ContactData!=null && request.Details.ContactData.SystemEndpoint!=null && request.Details.ContactData.SystemEndpoint.Address!=null){
+            dnis=request.Details.ContactData.SystemEndpoint.Address;
+        }
         try {
             ClassLoader loader = this.getClass().getClassLoader();
             URL url = loader.getResource("dnisProfile.json");
